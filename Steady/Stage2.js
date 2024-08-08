@@ -23,8 +23,6 @@ class Stage2 extends Phaser.Scene {
         this.load.image("F4", "assets/Focus4.png");
         this.load.image("F5", "assets/Focus5.png");
 
-        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
-
     }
 
     create() {
@@ -178,24 +176,24 @@ class Stage2 extends Phaser.Scene {
         this.shadowD.x = this.player.x
         this.shadowD.y = this.player.y
 
-        var keyP = this.input.keyboard.addKey(80);
-        var keyS = this.input.keyboard.addKey(83);
+        // var keyP = this.input.keyboard.addKey(80);
+        // var keyS = this.input.keyboard.addKey(83);
 
-        keyP.on(
-            "down", function () {
+        // keyP.on(
+        //     "down", function () {
 
-                this.scene.pause()
-            },
-            this
-        );
+        //         this.scene.pause()
+        //     },
+        //     this
+        // );
 
-        keyS.on(
-            "down", function () {
+        // keyS.on(
+        //     "down", function () {
 
-                this.scene.resume('Stage2')
-            },
-            this
-        );
+        //         this.scene.resume('Stage2')
+        //     },
+        //     this
+        // );
 
         player.body.offset.x = 250;
         player.body.offset.y = 120;

@@ -19,6 +19,15 @@ class Cutscene1 extends Phaser.Scene {
         this.load.image("cuts4.2", "assets/cutscene 1.3.3.jpg");
         this.load.image("cuts5", "assets/cutscene.1.4.5.jpg");
         this.load.image("cuts6", "assets/cutscene 1.4.jpg");
+
+        this.GG1snd = this.sound.add("GG1").setVolume(1);
+        this.GG2snd = this.sound.add("GG2").setVolume(1);
+        this.GG3snd = this.sound.add("GG3").setVolume(1);
+        this.GG4snd = this.sound.add("GG4").setVolume(1);
+        this.M1snd = this.sound.add("M1").setVolume(1);
+        this.M2snd = this.sound.add("M2").setVolume(1);
+        this.M3snd = this.sound.add("M3").setVolume(1);
+        this.M4snd = this.sound.add("M4").setVolume(1);
         
     }
 
@@ -34,10 +43,9 @@ class Cutscene1 extends Phaser.Scene {
         this.cut5 = this.add.image(640, 360, 'cuts5').setScrollFactor(0);
         this.cut6 = this.add.image(640, 360, 'cuts6').setScrollFactor(0);
 
-
         var space = this.input.keyboard.addKey("SPACE");
 
-
+        this.GG1snd.play();
 
         // On spacebar event, call the world scene
         space.on(
@@ -59,6 +67,9 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.M1snd.play();
+            
+
 
 
 
@@ -71,6 +82,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG2snd.play();
 
 
         } else if (window.scene === 5) {
@@ -82,6 +94,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.M2snd.play();
 
 
         } else if (window.scene === 4) {
@@ -93,6 +106,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG3snd.play();
 
 
         } else if (window.scene === 3) {
@@ -104,6 +118,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.M3snd.play();
 
 
         } else if (window.scene === 2) {
@@ -115,6 +130,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(true);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG4snd.play();
 
 
         } else if (window.scene === 1) {
@@ -126,6 +142,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(true);
             this.cut6.setVisible(false);
+            this.M4snd.play();
 
         } else if (window.scene === 0) {
             this.cut1.setVisible(false);
@@ -136,8 +153,11 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(true);
+    
 
         } else if (window.scene === -1) {
+            this.sound.stopAll();
+            window.mainmusic - this.sound.add("Theme").setVolume(0.7).setLoop(true).play()
             let playerPos = {};
             playerPos.x = 150;
             playerPos.y = 1130;

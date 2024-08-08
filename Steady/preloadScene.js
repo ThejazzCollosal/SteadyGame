@@ -35,6 +35,18 @@ class preloadScene extends Phaser.Scene {
         this.load.image("S8", "assets/S1cut8.jpg");
         this.load.image("S9", "assets/S1cutInst.jpg");
 
+        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
+        this.load.audio("GG1", "assets/GG1.mp3");
+        this.load.audio("GG2", "assets/GG2.mp3");
+        this.load.audio("GG3", "assets/GG3.mp3");
+        this.load.audio("GG4", "assets/GG4.mp3");
+        this.load.audio("M1", "assets/Maine1.mp3");
+        this.load.audio("M2", "assets/Maine2.mp3");
+        this.load.audio("M3", "assets/Maine3.mp3");
+        this.load.audio("M4", "assets/Maine4.mp3");
+        this.load.audio("Chaos", "assets/ChaoticNoise.mp3");
+        this.load.audio("Theme", "assets/SteadyTheme.mp3");
+
 
 
     }
@@ -90,19 +102,9 @@ class preloadScene extends Phaser.Scene {
         repeat: -1
     });
     
-        var spaceDown = this.input.keyboard.addKey("SPACE");
-  
       // On spacebar event, call the world scene
   
-      spaceDown.on(
-        "down", function () {
+
         this.scene.start("Home", {});
-        // let playerPos = {};
-        //   playerPos.x = 65;
-        //     playerPos.y = 327;
-        //     this.scene.start("Stage2", { player: playerPos });
-        },
-        this
-      );
     }
 }

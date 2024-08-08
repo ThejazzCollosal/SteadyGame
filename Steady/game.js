@@ -15,7 +15,7 @@ var config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
       },
-    scene: [preloadScene,Home,Cutscene1,Cutscene2,Stage1,CutsceneS1,Stage2,Stage3,death,death2] 
+    scene: [preloadScene,Home,Stageselect,Cutscene1,Cutscene2,Stage1,CutsceneS1,Stage2,Stage3,death,death2] 
 };
 
 window.light =16;

@@ -112,6 +112,8 @@ class Stage1 extends Phaser.Scene {
 
         window.player = this.player
 
+        this.chaossnd = this.sound.add("Chaos").setVolume(1);
+
         // this.physics.world.bounds.width = this.solidsLayer.width;
         // this.physics.world.bounds.height = this.solidsLayer.height;
 
@@ -187,24 +189,24 @@ class Stage1 extends Phaser.Scene {
             this
         );
 
-        var keyP = this.input.keyboard.addKey(80);
-        var keyS = this.input.keyboard.addKey(83);
+        // var KeyP = this.input.keyboard.addKey(80);
+        // var KeyS = this.input.keyboard.addKey(83);
 
-        keyP.on(
-            "down", function () {
+        // KeyP.on(
+        //     "down", function () {
 
-                this.scene.pause()
-            },
-            this
-        );
+        //         this.scene.pause()
+        //     },
+        //     this
+        // );
 
-        keyS.on(
-            "down", function () {
+        // KeyS.on(
+        //     "down", function () {
 
-                this.scene.resume()
-            },
-            this
-        );
+        //         this.scene.resume()
+        //     },
+        //     this
+        // );
     
 
         let CC = this.physics.add.overlap(
@@ -452,6 +454,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaoticR.x = -100;
         this.chaoticR.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR--
@@ -464,6 +467,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic2R.x = -100;
         this.chaotic2R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR2--
@@ -475,6 +479,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic3R.x = -100;
         this.chaotic3R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR3--
@@ -486,6 +491,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic4R.x = -100;
         this.chaotic4R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR4--
@@ -497,6 +503,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic5R.x = -100;
         this.chaotic5R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR5--
@@ -508,6 +515,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic6R.x = -100;
         this.chaotic6R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR6--
@@ -519,6 +527,7 @@ class Stage1 extends Phaser.Scene {
         enemy.disableBody(true, true);
         this.chaotic7R.x = -100;
         this.chaotic7R.y = -100;
+        this.chaossnd.play();
         this.cameras.main.shake(100);
         window.lives--
         window.CR7--
