@@ -24,6 +24,7 @@ class Cutscene2 extends Phaser.Scene {
         this.load.image("C11", "assets/S2CUT11.jpg");
         this.load.image("C12", "assets/S2CUT12.jpg");
         this.load.image("C13", "assets/S2CUT13.jpg");
+        this.load.image("CI", "assets/S2cutinst.jpg");
 
         
     }
@@ -44,6 +45,7 @@ class Cutscene2 extends Phaser.Scene {
         this.C11 = this.add.image(640, 360, 'C11').setScrollFactor(0);
         this.C12 = this.add.image(640, 360, 'C12').setScrollFactor(0);
         this.C13 = this.add.image(640, 360, 'C13').setScrollFactor(0);
+        this.CI = this.add.image(640, 360, 'CI').setScrollFactor(0);
 
 
         var space = this.input.keyboard.addKey("SPACE");
@@ -75,6 +77,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         } else if (window.scene2 === 12) {
             this.CT1.setVisible(false);
@@ -90,6 +93,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         } else if (window.scene2 === 11) {
             this.CT1.setVisible(false);
@@ -105,6 +109,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 10) {
             this.CT1.setVisible(false);
@@ -120,6 +125,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 9) {
             this.CT1.setVisible(false);
@@ -135,6 +141,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 8) {
             this.CT1.setVisible(false);
@@ -150,6 +157,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 7) {
             this.CT1.setVisible(false);
@@ -165,6 +173,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 6) {
             this.CT1.setVisible(false);
@@ -180,6 +189,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 5) {
             this.CT1.setVisible(false);
@@ -195,6 +205,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 4) {
             this.CT1.setVisible(false);
@@ -210,6 +221,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 3) {
             this.CT1.setVisible(false);
@@ -225,6 +237,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(true);
             this.C12.setVisible(false);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 2) {
             this.CT1.setVisible(false);
@@ -240,6 +253,7 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(true);
             this.C13.setVisible(false);
+            this.CI.setVisible(false);
 
         }else if (window.scene2 === 1) {
             this.CT1.setVisible(false);
@@ -255,8 +269,25 @@ class Cutscene2 extends Phaser.Scene {
             this.C11.setVisible(false);
             this.C12.setVisible(false);
             this.C13.setVisible(true);
+            this.CI.setVisible(false);
 
-        }else if (window.scene2 === 0) {
+        } else if (window.scene2 === 0) {
+            this.CT1.setVisible(false);
+            this.CT2.setVisible(false);
+            this.CT3.setVisible(false);
+            this.C4.setVisible(false);
+            this.C5.setVisible(false);
+            this.C6.setVisible(false);
+            this.C7.setVisible(false);
+            this.C8.setVisible(false);
+            this.C9.setVisible(false);
+            this.C10.setVisible(false);
+            this.C11.setVisible(false);
+            this.C12.setVisible(false);
+            this.C13.setVisible(false);
+            this.CI.setVisible(true);
+
+        }else if (window.scene2 === -1) {
             let playerPos = {};
             playerPos.x = 65;
             playerPos.y = 327;

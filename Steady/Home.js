@@ -58,7 +58,7 @@ class Home extends Phaser.Scene {
     // On spacebar event, call the world scene
     enter.on(
       "down", function () {
-        this.scene.start("Cutscene1");
+        this.scene.start("instructions");
 
         window.light = 16;
         window.focus2 = 5;
