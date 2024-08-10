@@ -105,6 +105,6 @@ class preloadScene extends Phaser.Scene {
       // On spacebar event, call the world scene
   
 
-        this.scene.start("Home", {});
+        this.scene.start("Home");
     }
 }
