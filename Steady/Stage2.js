@@ -23,8 +23,6 @@ class Stage2 extends Phaser.Scene {
         this.load.image("F4", "assets/Focus4.png");
         this.load.image("F5", "assets/Focus5.png");
 
-        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
-
     }
 
     create() {
