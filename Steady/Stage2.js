@@ -201,11 +201,11 @@ class Stage2 extends Phaser.Scene {
         player.body.height = 120;
 
         if (this.player.x > 3685 && this.player.x < 3747 && this.player.y < 584 && this.player.y > 582) {
-            console.log("Jump to stage3");
-            let playerPos = {};
-            playerPos.x = 68;
-            playerPos.y = 3718;
-            this.scene.start("Stage3", { player: playerPos });
+            // console.log("Jump to stage3");
+            // let playerPos = {};
+            // playerPos.x = 68;
+            // playerPos.y = 3718;
+            this.scene.start("end");
         }
 
         if (this.cursors.left.isDown) {
