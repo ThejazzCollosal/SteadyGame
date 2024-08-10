@@ -35,7 +35,7 @@ class preloadScene extends Phaser.Scene {
         this.load.image("S8", "assets/S1cut8.jpg");
         this.load.image("S9", "assets/S1cutInst.jpg");
 
-        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
+        this.load.audio("SDeath", "assets/shadowDeathSound.mp3");
         this.load.audio("GG1", "assets/GG1.mp3");
         this.load.audio("GG2", "assets/GG2.mp3");
         this.load.audio("GG3", "assets/GG3.mp3");
