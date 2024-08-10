@@ -276,7 +276,7 @@ class Stage2 extends Phaser.Scene {
 
         if (window.light == 1) {
             this.shadowD.setVisible(true);
-            this.shadowdeathsnd.play()
+            this.shadowdeathsnd.play();
             this.shadowdeathsnd.once('complete', () => {
                 console.log('Sound completed');
                 this.scene.start("death2")
