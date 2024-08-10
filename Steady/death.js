@@ -22,6 +22,7 @@ class death extends Phaser.Scene {
         const image = this.add.image(640, 360, 'Die');
 
         var space = this.input.keyboard.addKey("SPACE");
+         this.sound.stopAll();
 
         // On spacebar event, call the world scene
 
