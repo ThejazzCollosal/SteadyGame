@@ -117,7 +117,7 @@ class Stage2 extends Phaser.Scene {
             this
         );
 
-        this.shadowdeathsnd = this.sound.add("shadowdeath").setVolume(1);
+        this.shadowdeathsnd = this.sound.add("SDeath").setVolume(1);
 
 
 
