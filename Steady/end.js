@@ -19,7 +19,7 @@ class end extends Phaser.Scene {
     create() {
       console.log("*** intro scene");
   
-      const image = this.add.image(640, 360, 'thanks').setScale(0.66);
+      const image = this.add.image(640, 360, 'thanks').setScale(1);
       var space = this.input.keyboard.addKey("SPACE");
   
       // On spacebar event, call the world scene
