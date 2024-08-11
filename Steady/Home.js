@@ -11,7 +11,7 @@ class Home extends Phaser.Scene {
   preload() {
 
     // Step 2 : Preload any images here, nickname, filename
-    this.load.image("Homepage", "assets/Title screen Pre.jpg");
+    this.load.image("Homepage", "assets/Title Screen Pre.jpg");
 
 
   }

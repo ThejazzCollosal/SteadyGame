@@ -23,6 +23,9 @@ class Stage2 extends Phaser.Scene {
         this.load.image("F4", "assets/Focus4.png");
         this.load.image("F5", "assets/Focus5.png");
 
+        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
+
+
     }
 
     create() {
@@ -30,6 +33,8 @@ class Stage2 extends Phaser.Scene {
         console.log("Stage2")
 
         //Step3
+        this.sound.stopAll();
+        window.mainmusic - this.sound.add("Theme").setVolume(0.7).setLoop(true).play()
         let map = this.make.tilemap({ key: "map2" });
 
         // Step 4 Load the game tileset
@@ -117,9 +122,7 @@ class Stage2 extends Phaser.Scene {
             this
         );
 
-        this.shadowdeathsnd = this.sound.add("SDeath").setVolume(1);
-
-
+        this.shadowdeathsnd = this.sound.add("shadowdeath").setVolume(1);
 
         //////////////////////////////////////Collisions////////////////////////////////////////
 
@@ -276,6 +279,7 @@ class Stage2 extends Phaser.Scene {
 
         if (window.light == 1) {
             this.shadowD.setVisible(true);
+            this.sound.stopAll();
             this.shadowdeathsnd.play();
             this.shadowdeathsnd.once('complete', () => {
                 console.log('Sound completed');

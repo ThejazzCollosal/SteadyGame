@@ -68,8 +68,6 @@ class Cutscene1 extends Phaser.Scene {
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
             this.M1snd.play();
-            
-
 
 
 
@@ -82,7 +80,9 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG1snd.stop();
             this.GG2snd.play();
+            
 
 
         } else if (window.scene === 5) {
@@ -94,6 +94,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.M1snd.stop();
             this.M2snd.play();
 
 
@@ -106,6 +107,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG2snd.stop();
             this.GG3snd.play();
 
 
@@ -118,6 +120,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.M2snd.stop();
             this.M3snd.play();
 
 
@@ -130,6 +133,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(true);
             this.cut5.setVisible(false);
             this.cut6.setVisible(false);
+            this.GG3snd.stop();
             this.GG4snd.play();
 
 
@@ -142,6 +146,7 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(true);
             this.cut6.setVisible(false);
+            this.M3snd.stop();
             this.M4snd.play();
 
         } else if (window.scene === 0) {
@@ -153,11 +158,11 @@ class Cutscene1 extends Phaser.Scene {
             this.cut42.setVisible(false);
             this.cut5.setVisible(false);
             this.cut6.setVisible(true);
+            this.GG4snd.stop();
     
 
         } else if (window.scene === -1) {
             this.sound.stopAll();
-            window.mainmusic - this.sound.add("Theme").setVolume(0.7).setLoop(true).play()
             let playerPos = {};
             playerPos.x = 150;
             playerPos.y = 1130;

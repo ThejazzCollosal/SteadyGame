@@ -32,6 +32,9 @@ class Stage1 extends Phaser.Scene {
         console.log("Stage1")
 
         //Step3
+
+        this.sound.stopAll();
+        window.mainmusic - this.sound.add("Theme").setVolume(0.7).setLoop(true).play()
         let map = this.make.tilemap({ key: "world" });
 
         // Step 4 Load the game tileset
@@ -146,10 +149,10 @@ class Stage1 extends Phaser.Scene {
         space.on(
             "down", function () {
 
-                if (window.relax > 1 && window.marker==1) {
-                    
+                if (window.relax > 1 && window.marker == 1) {
+
                     window.relax--
-                    
+
                     CC.active = false;
                     CC2.active = false;
                     CC3.active = false;
@@ -184,7 +187,7 @@ class Stage1 extends Phaser.Scene {
                         this.chaotic7R.setVisible(false)
                     });
                 }
-                
+
             },
             this
         );
@@ -207,7 +210,7 @@ class Stage1 extends Phaser.Scene {
         //     },
         //     this
         // );
-    
+
 
         let CC = this.physics.add.overlap(
             this.player, // player
