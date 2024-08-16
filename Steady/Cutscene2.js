@@ -25,6 +25,8 @@ class Cutscene2 extends Phaser.Scene {
         this.load.image("C12", "assets/S2CUT12.jpg");
         this.load.image("C13", "assets/S2CUT13.jpg");
         this.load.image("CI", "assets/S2cutinst.jpg");
+        this.load.image("cutrule", "assets/cutscenerules.png");
+
 
         
     }
@@ -46,6 +48,8 @@ class Cutscene2 extends Phaser.Scene {
         this.C12 = this.add.image(640, 360, 'C12').setScrollFactor(0);
         this.C13 = this.add.image(640, 360, 'C13').setScrollFactor(0);
         this.CI = this.add.image(640, 360, 'CI').setScrollFactor(0);
+        this.cutrule = this.add.image(640, 680, 'cutrule').setScrollFactor(0);
+
 
 
         var space = this.input.keyboard.addKey("SPACE");

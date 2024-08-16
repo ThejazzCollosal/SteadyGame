@@ -23,7 +23,7 @@ class Stage2 extends Phaser.Scene {
         this.load.image("F4", "assets/Focus4.png");
         this.load.image("F5", "assets/Focus5.png");
 
-        this.load.audio("shadowdeath", "assets/ShadowDeathSound.mp3");
+        this.load.audio("shadowdeath", "assets/shadowDeathSound.mp3");
 
 
     }
@@ -33,7 +33,7 @@ class Stage2 extends Phaser.Scene {
         console.log("Stage2")
 
         //Step3
-        this.sound.stopAll();
+        //this.sound.stopAll();
         window.mainmusic - this.sound.add("Theme").setVolume(0.7).setLoop(true).play()
         let map = this.make.tilemap({ key: "map2" });
 
@@ -60,6 +60,8 @@ class Stage2 extends Phaser.Scene {
         this.BackgroundLayer = map.createLayer("Background", tilesArray, 0, 0);
         this.DecalsLayer = map.createLayer("Decals", tilesArray, 0, 0);
         this.ObstaclesLayer = map.createLayer("Obstacles", tilesArray, 0, 0);
+        
+        this.S1R = this.add.image(1100, 680, 'S1R').setScrollFactor(0);
 
         this.cursors = this.input.keyboard.createCursorKeys();
 

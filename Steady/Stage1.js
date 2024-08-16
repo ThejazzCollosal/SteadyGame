@@ -450,6 +450,10 @@ class Stage1 extends Phaser.Scene {
             this.heart3.setVisible(false);
             this.scene.start("death", {});
         }
+
+        if(window.marker === 1){
+            this.S1R = this.add.image(1100, 680, 'S1R').setScrollFactor(0);
+        }
     }
 
     overlapChaotic(player, enemy) {

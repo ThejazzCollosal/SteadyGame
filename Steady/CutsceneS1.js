@@ -12,6 +12,8 @@ class CutsceneS1 extends Phaser.Scene {
   
       // Step 2 : Preload any images here, nickname, filename
         this.load.image("scene1", "assets/S1C1.png");
+        this.load.image("cutrule", "assets/cutscenerules.png");
+
   
     }
   
@@ -27,6 +29,7 @@ class CutsceneS1 extends Phaser.Scene {
       this.inscene7 = this.add.image(640, 360, 'S7').setScrollFactor(0);
       this.inscene8 = this.add.image(640, 360, 'S8').setScrollFactor(0);
       this.inscene9 = this.add.image(640, 360, 'S9').setScrollFactor(0).setScale(1.15);
+      this.cutrule = this.add.image(640, 680, 'cutrule').setScrollFactor(0);
 
 
       var space = this.input.keyboard.addKey("SPACE");
